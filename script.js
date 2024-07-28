@@ -1,5 +1,5 @@
 document.getElementById('add').addEventListener('click', function() {
-    const itemNameInput = document.getElementById('item-qty-input');
+    const itemNameInput = document.getElementById('item-name-input');
     const itemPriceInput = document.getElementById('item-price-input');
     const itemName = itemNameInput.value.trim();
     const itemPrice = parseFloat(itemPriceInput.value);
