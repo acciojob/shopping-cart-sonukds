@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Shopping List</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <label for="item-name-input">Item Name:</label>
-        <input type="text" id="item-name-input" aria-label="Item Name">
-        
-        <label for="item-price-input">Item Price:</label>
-        <input type="number" id="item-price-input" aria-label="Item Price">
-        
-        <button id="add">Add</button>
-    </div>
-    <table>
+    <h1>Shopping Cart</h1>
+    <label for="item-name-input">Item Name:</label>
+    <input type="text" id="item-name-input" aria-label="Item Name">
+    <label for="item-price-input">Price:</label>
+    <input type="number" id="item-price-input" aria-label="Price">
+    <button id="add">Add</button>
+
+    <table aria-role="table">
         <thead>
             <tr>
                 <th id="item">Item</th>
                 <th id="price">Price</th>
             </tr>
         </thead>
-        <tbody id="shopping-list">
+        <tbody id="cart-body">
             <tr>
                 <td colspan="2">Grand Total: <span id="total">0</span></td>
             </tr>
