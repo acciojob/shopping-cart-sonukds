@@ -4,39 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
-    <label for="item-qty-input">Item Name:</label>
-    <input type="text" id="item-qty-input" aria-label="Item Name">
-    <label for="item-price-input">Price:</label>
-    <input type="number" id="item-price-input" aria-label="Price">
-    <button id="add">Add</button>
+    <div>
+  <label for="item-name-input">Item Name:</label>
+  <input type="text" id="item-name-input" aria-label="Item Name">
+  
+  <label for="item-price-input">Item Price:</label>
+  <input type="number" id="item-price-input" aria-label="Item Price" step="0.01" min="0">
 
-    <table aria-role="table">
-        <thead>
-            <tr>
-                <th id="item">Item</th>
-                <th id="price">Price</th>
-            </tr>
-        </thead>
-        <tbody id="cart-body">
-            <tr>
-                <td colspan="2">Grand Total: <span id="total">0</span></td>
-            </tr>
-        </tbody>
-    </table>
+  <button id="add" aria-label="Add Item">Add</button>
+</div>
+
+<table aria-role="table">
+  <thead>
+    <tr>
+      <th id="item">Item</th>
+      <th id="price">Price</th>
+    </tr>
+  </thead>
+  <tbody id="shopping-list">
+    <!-- Items will be dynamically added here -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><strong>Total:</strong></td>
+      <td id="total">0.00</td>
+    </tr>
+  </tfoot>
+</table>
+
 
     <script src="script.js"></script>
 </body>
